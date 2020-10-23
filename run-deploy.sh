@@ -1,5 +1,14 @@
 #!/bin/bash
 
+echo "External IP1"
+read EXIP1 
+echo "External IP2"
+read EXIP2 
+echo "External IP3"
+read EXIP3 
+
+export EXIP1 EXIP2 EXIP3
+
 IP1=$(getent hosts instance-1 | awk '{print $1}')
 IP2=$(getent hosts instance-2 | awk '{print $1}')
 IP3=$(getent hosts instance-3 | awk '{print $1}')

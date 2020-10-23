@@ -6,7 +6,7 @@ IP3=$(getent hosts instance-3 | awk '{print $1}')
 export IP1 IP2 IP3
 export REMOTE_MOUNT="/srv/docker/data"
 
-cd /srv/docker/swarm-cluster-example
+cd /srv/docker/my-cluster-swarm
 docker stack deploy -c traefik/stack.yaml traefik
 docker stack deploy -c portainer/stack.yaml portainer
 docker stack deploy -c consul-cluster/stack.yaml consul-cluster

@@ -1,5 +1,9 @@
+#Instalo GIT
 apt install -y git
+
+#Instalo Docker
 curl https://get.docker.com | sudo bash
+
 
 mkdir -p /srv/docker
 #	Configurar NFS
@@ -8,6 +12,7 @@ apt install -y nfs-common
 echo '/srv/nfs 10.132.0.0/24(rw,no_root_squash,no_subtree_check)' >> /etc/exports
 mount -a
 
+# Me uno al cluster
 /srv/docker/join.sh
 
 
